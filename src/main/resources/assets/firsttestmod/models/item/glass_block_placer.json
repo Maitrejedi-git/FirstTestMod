@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "firsttestmod:item/glass_block_placer"
+    }
+}
