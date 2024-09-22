@@ -12,6 +12,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.MovementInputUpdateEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import org.maitrejedi.firsttestmod.content.blocks.entities.ModBlockEntities;
+import org.maitrejedi.firsttestmod.content.entities.projectiles.ModEntities;
 import org.maitrejedi.firsttestmod.content.items.GlassBlockPlacerItem;
 import org.maitrejedi.firsttestmod.init.ItemsMI;
 import org.slf4j.Logger;
@@ -31,6 +33,8 @@ public class FirstTestMod
 
 	public FirstTestMod(IEventBus modBus) {
 		NeoForge.EVENT_BUS.addListener(FirstTestMod::placeGlassUnderPlayer);
+		ModEntities.ENTITY_TYPES.register(modBus);
+		ModBlockEntities.BLOCK_ENTITIES.register(modBus);
 		LanguageAdapter.registerMod(MOD_ID);
 	}
 

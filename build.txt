@@ -22,7 +22,7 @@ maven_group=org.maitrejedi.firsttestmod
 maven_url=file:///R:/
 
 # MC Info
-mc_user=Zeitheron,63fa4c485b5640809727d5d59663e603
+mc_user=MaitreJD,db8b7680-d9b3-4f5c-b1e5-dc07c5f71dbe
 
 # Project ID on CurseForge
 cf_project=0

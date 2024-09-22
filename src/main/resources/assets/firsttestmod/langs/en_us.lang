@@ -1,4 +1,7 @@
 item.firsttestmod.glass_block_placer=Glass block placer
+item.firsttestmod.red_dot=Red dot
+item.firsttestmod.projectile_launcher=Projectile launcher
+block.firsttestmod.repair_station_block=Repair station
 item.modid.test=Test item
 
 creative_tab.firsttestmod.root=First Test Mod
