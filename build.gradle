@@ -421,8 +421,9 @@ build.dependsOn signJar
 
 task generateChangelog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
     group = "git changelog"
-    if (config.last_git_commit != null && !config.last_git_commit.isEmpty()) fromRevision = config.last_git_commit
-    templateContent = """
+    if (config.last_git_commit != null && !config.last_git_commit.isEmpty()) fromRevision.set(project.provider { config.last_git_commit })
+    templateContent.set(project.provider {
+        """
 Changelog:
 
 {{#tags}}
@@ -431,6 +432,7 @@ Changelog:
   {{/commits}}
 {{/tags}}
 """
+    })
 }
 
 tasks.register('buildAndUploadMod') {

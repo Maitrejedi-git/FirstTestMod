@@ -43,7 +43,7 @@ public class RepairStationBlockEntity extends BlockEntity implements TickableBlo
 
     public void tick() {
         if (level != null && !level.isClientSide) {
-            if (level.isDay() && level.canSeeSky(getBlockPos())) {
+            if (level.isDay() && !level.isRaining() && level.canSeeSky(getBlockPos())) {
                 if (!itemStack.isEmpty() && itemStack.getDamageValue() > 0 && itemStack.getItem() instanceof ProjectileLauncherItem) {
                     //System.out.println("ItemStack in block entity: " + this.itemStack);
                     itemStack.setDamageValue(itemStack.getDamageValue() - 1);
